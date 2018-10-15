@@ -1,8 +1,9 @@
 # Ubuntu Install Shell Script 
 
-Just run this 
+Run this 
 ``` 
-./install.sh
+chmod +x install.sh
+sudo ./install.sh
 ```
 
 ## Installs 
