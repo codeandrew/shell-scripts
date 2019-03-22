@@ -3,7 +3,12 @@
 #### Contents
 - Homebrew
 - Bash Completion
+- Gitlab Runner
 - Docker
+- VirtualBox
+- Kubernetes
+- Minikube
+
 
 
 ### Errors
