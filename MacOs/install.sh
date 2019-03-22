@@ -5,6 +5,9 @@ echo "2019-03-22"
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo "Generating ssh keygen"
+ssh-keygen -t rsa
+
 echo "Installing Bash Completion"
 brew install bash-completion
 
