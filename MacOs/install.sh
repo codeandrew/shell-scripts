@@ -43,3 +43,16 @@ echo
 echo
 echo "Installing Minikube"
 brew cask install minikube
+
+
+
+
+
+
+echo
+echo
+echo
+echo
+echo "In .zshrc:"
+echo "change ZSH_THEME=robbyrussell to"
+echo "ZSH_THEME=bira"
