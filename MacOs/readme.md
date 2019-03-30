@@ -3,6 +3,8 @@
 #### Contents
 - Homebrew
 - Bash Completion
+- Oh My Z Shell
+- Tmux
 - Gitlab Runner
 - Docker
 - VirtualBox
