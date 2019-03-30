@@ -8,6 +8,9 @@ echo "Installing Homebrew"
 echo "Installing Bash Completion"
 brew install bash-completion
 
+echo "Installing tmux"
+brew install tmux
+
 echo
 echo
 echo "Installing Gitlan Runner"
