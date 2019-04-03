@@ -1,4 +1,8 @@
 #!/bin/sh
+sudo apt update
+sudo apt install git
+
+git --version
 
 echo "Installing Oh My Z Shell"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
