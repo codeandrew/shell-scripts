@@ -7,6 +7,8 @@ git --version
 echo "Installing Oh My Z Shell"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+sudo apt-get install tmux
+
 ## For SSH Key
 echo '[!!]'
 echo 'Dont Forget to create ssh key'

@@ -1,6 +1,11 @@
 # Ubuntu 18 Scripts
 
 
+## Basic
+- git
+- zshell
+- tmux
+
 ## Devops
 Contents
 - Docker
