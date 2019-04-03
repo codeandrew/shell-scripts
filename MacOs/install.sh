@@ -11,6 +11,13 @@ ssh-keygen -t rsa
 echo "Installing Bash Completion"
 brew install bash-completion
 
+echo "Installing Oh My Z Shell"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+echo "Installing tmux"
+brew install tmux
+
 echo
 echo
 echo "Installing Gitlan Runner"
@@ -39,3 +46,16 @@ echo
 echo
 echo "Installing Minikube"
 brew cask install minikube
+
+
+
+
+
+
+echo
+echo
+echo
+echo
+echo "In .zshrc:"
+echo "change ZSH_THEME=robbyrussell to"
+echo "ZSH_THEME=bira"

@@ -3,7 +3,8 @@
 #### Contents
 - Homebrew
 - Bash Completion
-- Generate ssh keygen
+- Oh My Z Shell
+- Tmux
 - Gitlab Runner
 - Docker
 - VirtualBox
