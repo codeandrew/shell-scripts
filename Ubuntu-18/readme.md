@@ -14,6 +14,20 @@ Contents
 - kubectl
 - kubelet
 - flannel
+- awscli
+
+
+### Important
+#### Order of installation
+1. install.sh
+2. devops.sh
+3. k8s-master.sh (Master Node Only)
+> save the kudeadm hash for the working
+4. k8s-networking.sh (Master Node Only)
+
+** For Master node only **
+- k8s-master.sh
+- k8s-networking.sh
 
 
 ### Kubernetes Commands
