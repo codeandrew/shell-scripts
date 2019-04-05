@@ -1,5 +1,4 @@
 #!/bin/sh
-
 echo "Installing Docker"
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -17,6 +16,10 @@ sudo apt-mark hold docker-ce
 
 echo
 echo
+
+## AWS CLI
+
+sudo apt install awscli
 
 ### KUBERNETES
 # kubelet, kubeadm, kubectl
@@ -44,3 +47,6 @@ echo "Use k8s-master.sh if this is the master node"
 
 echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
+
+echo "use"
+echo "aws configure"
