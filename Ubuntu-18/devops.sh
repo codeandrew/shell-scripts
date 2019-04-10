@@ -22,6 +22,9 @@ echo
 ## AWS CLI
 
 sudo apt install awscli
+sudo apt-get install python3-pip
+export LC_ALL=C
+sudo pip3 install --upgrade awscli
 
 ### KUBERNETES
 # kubelet, kubeadm, kubectl
