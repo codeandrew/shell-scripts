@@ -15,6 +15,8 @@ sudo apt-get install -y docker-ce=18.06.1~ce~3-0~ubuntu
 sudo apt-mark hold docker-ce
 
 sudo usermod -a -G docker $USER
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "/home/$USER/.docker" -R
 
 echo
 echo
