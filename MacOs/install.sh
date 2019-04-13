@@ -48,7 +48,11 @@ echo "Installing Minikube"
 brew cask install minikube
 
 
-
+echo "Installing NVM"
+git clone http://github.com/creationix/nvm.git .nvm
+source ~/.nvm/nvm.sh
+nvm install --latest-npm
+nvm install 10
 
 
 
