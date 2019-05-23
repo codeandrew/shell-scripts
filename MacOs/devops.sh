@@ -1,6 +1,20 @@
-
+#!/bin/sh
 brew install doctl
-doctl auth init
+
+echo "Do you have a digital ocean token? y/n"
+read DO_TOKEN
+if [ $DO_TOKEN == 'y']
+then
+  doctl auth init
+fi
+
+brew install kubectl
+echo "Do you have existing kubeclt? y/n"
+read KO_OVERWRITE
+if [ $KO_OVERWRITE == 'y']
+then
+  brew link --overwrite kubernetes-cli
+fi
 
 echo "To Create k8s cluster in Digital ocean"
 echo "doctl k8s cluster create example"
