@@ -11,7 +11,7 @@ Creating a cluster using the default options is as easy as running:
 
 Here's a more complete example of creating a cluster while specifying non-default options:  
 ```
-$ doctl k8s cluster create \
+doctl k8s cluster create \
    --region lon1 \
    --version 1.14.2-do.0 \
    --tag demo \
