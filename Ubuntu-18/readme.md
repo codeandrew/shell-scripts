@@ -74,3 +74,12 @@ $
 
 > https://github.com/helm/helm/issues/4685
 > link for helm tiller issue 
+
+> https://github.com/helm/helm/issues/3130
+
+Run this to Check
+```
+helm list
+helm repo update
+helm install --name nginx-ingress stable/nginx-ingress
+```
