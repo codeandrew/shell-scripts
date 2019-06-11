@@ -6,4 +6,8 @@ chmod 700 get_helm.sh
 
 
 echo "Creating tiller"
-helm init --service-account tiller
+#helm init --service-account tiller
+helm init
+
+echo
+helm version
