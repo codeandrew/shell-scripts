@@ -1,0 +1,30 @@
+
+<c-f>  page up
+<c-b>  page down 
+
+0 start line
+$ end line
+
+zt
+zz
+zb
+
+dto delete till "o"
+dt<character>
+
+
+U uppercase
+u lowercase
+
+
+ci<character> change inside "
+ci" 
+ci[   change inside [
+ci{   change inside { 
+
+
+set hlsearch
+:let @/=''
+
+:%s/<word>/<word>/g find and replace
+:%s/the/ang/g
