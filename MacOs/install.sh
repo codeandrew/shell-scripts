@@ -5,6 +5,13 @@ echo "2019-03-22"
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo "Installing Python"
+brew install python
+echo "Installing Vim"
+brew install vim
+echo "Installing  Tree"
+brew install tree
+
 echo "Generating ssh keygen"
 ssh-keygen -t rsa
 
