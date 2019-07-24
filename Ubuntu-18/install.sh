@@ -4,11 +4,12 @@ sudo apt install git
 
 git --version
 
-sudo apt install zsh
-echo shell
+sudo apt-get update && sudo apt-get -y install zsh
+zsh --version
 
-echo "Installing Oh My Z Shell"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+chsh -s /bin/zsh
 
 sudo apt-get install tmux
 
