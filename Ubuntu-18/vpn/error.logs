@@ -1,0 +1,22 @@
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 VERIFY OK: depth=0, C=US, ST=CA, L=SanFrancisco, O=Fort-Funston, OU=MyVPN, CN=client1, name=server, emailAddress=me@myhost.mydomain
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_VER=2.4.7
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_PLAT=mac
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_PROTO=2
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_NCP=2
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_LZ4=1
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_LZ4v2=1
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_LZO=1
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_COMP_STUB=1
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_COMP_STUBv2=1
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_TCPNL=1
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 peer info: IV_GUI_VER="net.tunnelblick.tunnelblick_5370_3.8.0__build_5370)"
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Jul 30 10:40:04 vpn ovpn-server[10825]: 124.6.158.194:60262 [client1] Peer Connection Initiated with [AF_INET]124.6.158.194:60262
+Jul 30 10:40:04 vpn ovpn-server[10825]: client1/124.6.158.194:60262 MULTI_sva: pool returned IPv4=10.8.0.6, IPv6=(Not enabled)
+Jul 30 10:40:04 vpn ovpn-server[10825]: client1/124.6.158.194:60262 MULTI: Learn: 10.8.0.6 -> client1/124.6.158.194:60262
+Jul 30 10:40:04 vpn ovpn-server[10825]: client1/124.6.158.194:60262 MULTI: primary virtual IP for client1/124.6.158.194:60262: 10.8.0.6
+Jul 30 10:40:06 vpn ovpn-server[10825]: client1/124.6.158.194:60262 PUSH: Received control message: 'PUSH_REQUEST'
+Jul 30 10:40:06 vpn ovpn-server[10825]: client1/124.6.158.194:60262 SENT CONTROL [client1]: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 0,cipher AES-256-GCM' (status=1)
+Jul 30 10:40:06 vpn ovpn-server[10825]: client1/124.6.158.194:60262 Data Channel: using negotiated cipher 'AES-256-GCM'
+Jul 30 10:40:06 vpn ovpn-server[10825]: client1/124.6.158.194:60262 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Jul 30 10:40:06 vpn ovpn-server[10825]: client1/124.6.158.194:60262 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
