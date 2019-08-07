@@ -19,8 +19,8 @@ sudo apt-get install tmux
 # Install pip
 sudo apt install python3-pip
 # Set Default python to python3
-update-alternatives --install /usr/bin/python python /usr/bin/python3.6 10
-update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 10
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 10
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 10
 
 ## For SSH Key
 echo '[!!]'
