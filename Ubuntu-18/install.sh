@@ -11,6 +11,9 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 chsh -s /bin/zsh
 
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+source ~/.zshrc
+
 sudo apt-get install tmux
 
 # Install pip
