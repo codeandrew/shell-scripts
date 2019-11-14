@@ -16,3 +16,6 @@ alias aws_d="eval $( aws ecr get-login --registry-ids 925884704068 --region ap-s
 
 # Kubernetes
 alias k="kubectl"
+
+export LC_ALL=en_US.UTF-8
+
