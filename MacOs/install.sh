@@ -60,12 +60,12 @@ brew cask install minikube
 
 
 echo "Installing NVM"
-git clone http://github.com/creationix/nvm.git .nvm
-source ~/.nvm/nvm.sh
+brew install nvm
 nvm install --latest-npm
 nvm install 10
 
-
+echo "Installing Vtop"
+npm install -g vtop
 
 echo
 echo
