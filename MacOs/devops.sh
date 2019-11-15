@@ -29,11 +29,39 @@ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > inst
 chmod u+x install-helm.sh
 ./install-helm.sh
 
-kubectl -n kube-system create serviceaccount tiller
-kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
-helm init --service-account tiller
-kubectl get pods --namespace kube-system
-helm install stable/kubernetes-dashboard --name dashboard-demo
-helm list
-kubectl get services
+"
+-kubectl -n kube-system create serviceaccount tiller
+-kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+-helm init --service-account tiller
+-kubectl get pods --namespace kube-system
+-helm install stable/kubernetes-dashboard --name dashboard-demo
+-helm list
+-kubectl get services
+"
+
+# For Azure DevOps
+echo "Do you to install Azure ? y/n"
+read AZURE
+if [ $AZURE == 'y']
+then
+  brew install azure-cli
+fi
+
+
+# For OpenShift Client
+echo "Do you want to install OpenShift Client ? y/n"
+read OC
+if [ $OC == 'y']
+then
+  brew install openshift-cli
+fi
+
+# For Terraform
+echo "Do you want to install Terraform ? y/n"
+read OC
+if [ $OC == 'y']
+then
+  brew install terraform
+fi
+
 
