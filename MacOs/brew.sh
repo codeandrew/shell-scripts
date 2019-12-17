@@ -1,5 +1,11 @@
 #!/bin/sh
 
+## HOMEBREW 
+echo "Installing Homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+##############################################################################
+
 packages=( ansible azure-cli bash-completion bat docker-machine docker-machine-driver-xhyve doctl freetype gdbm gettext glib ilmbase
   imagemagick jpeg jq k9s kubernetes-cli kustomize libde265 libevent libffi libheif libidn2 libomp libpng libtiff libtool libunistring
   libyaml little-cms2 lua ncurses neofetch netcat nvm oniguruma openexr openjpeg openshift-cli openssl@1.1 pcre perl python
@@ -7,7 +13,7 @@ packages=( ansible azure-cli bash-completion bat docker-machine docker-machine-d
   webp wget x265 xz yq zsh-autosuggestions zsh-completions zsh-syntax-highlighting
 )
 
-cask_packages= ( docker minishift 
+cask_packages=( docker minishift 
 )
 
 for package in "${packages[@]}"; do 
@@ -16,4 +22,17 @@ for package in "${packages[@]}"; do
   brew install $package
   echo 
   echo "---------------------------------------------------------------------"
+  echo 
+  echo 
 done
+
+##############################################################################
+
+## CONFIGURATION COPY
+
+###  TMUX
+echo "copying tmux.conf"
+cp ../Configs/tmux.conf $HOME/.tmux.conf
+tmux source-file $HOME/.tmux.conf
+echo "---------------------------------------------------------------------"
+
