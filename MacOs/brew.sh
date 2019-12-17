@@ -16,6 +16,8 @@ packages=( ansible azure-cli bash-completion bat docker-machine docker-machine-d
 cask_packages=( docker minishift 
 )
 
+i=0
+
 for package in "${packages[@]}"; do 
   echo "---------------------------------------------------------------------"
   echo "installing $package" 
@@ -24,7 +26,12 @@ for package in "${packages[@]}"; do
   echo "---------------------------------------------------------------------"
   echo 
   echo 
+  ((i++))
 done
+
+echo "$i packages installed"
+
+sleep 5
 
 ##############################################################################
 
