@@ -67,6 +67,13 @@ nvm install 10
 echo "Installing Vtop"
 npm install -g vtop
 
+
+echo
+echo
+Echo "Installing mdless"
+gem install mdless
+
+
 echo
 echo
 echo
