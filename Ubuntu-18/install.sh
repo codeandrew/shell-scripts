@@ -13,6 +13,7 @@ packages=(
   tmux
   vim
   xclip
+  fzf
   traceroute
   net-tools
   nmap
