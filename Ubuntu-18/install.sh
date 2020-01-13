@@ -5,19 +5,26 @@ sudo apt update
 ## PACKAGES
 packages=(
   git
+  git-core
+  build-essential
+  openssl
+  libssl-dev
   zsh
   tmux
   vim
+  xclip
   traceroute
   net-tools
-  xclip
-  python3-pip
   nmap
   zenmap
+  python3-pip
+  ruby
   jq 
   yq  
   neofetch
 )
+
+
 
 desktop_packages=(
   vlc
@@ -65,7 +72,7 @@ source ~/.zshrc
 ## ALIASES
 echo "Exporting Aliases"
 echo "alias pbcopy='xclip -selection clipboard'" >> $HOME/.profile
-
+echo "alias pwdc='pwd | xclip -selection clipboard'" >> $HOME/.profile
 echo
 echo
 
