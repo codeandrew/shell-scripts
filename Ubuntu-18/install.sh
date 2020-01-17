@@ -8,6 +8,7 @@ packages=(
   git-core
   build-essential
   openssl
+  unzip
   libssl-dev
   zsh
   tmux
