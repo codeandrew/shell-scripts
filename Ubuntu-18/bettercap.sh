@@ -7,8 +7,6 @@ echo
 
 ls -latr
 
-sleep 500
-
 sudo find / -name libpcap.so 2> /dev/null
 
 sudo ln -s /usr/lib/x86_64-linux-gnu/libpcap.so /usr/lib/x86_64-linux-gnu/libpcap.so.1
