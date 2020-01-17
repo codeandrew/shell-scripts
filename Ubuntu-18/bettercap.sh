@@ -1,7 +1,11 @@
 
 wget -O bettercap.zip https://github.com/bettercap/bettercap/releases/download/v2.26.1/bettercap_linux_amd64_v2.26.1.zip
 
-unzip bettercap.zip -d . 
+unzip bettercap.zip 
+echo "Unzipping Done"
+echo
+
+ls -latr
 
 sleep 500
 
