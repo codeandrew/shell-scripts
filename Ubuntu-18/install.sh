@@ -45,7 +45,7 @@ sleep 2
 echo "Copying Configs ..."
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-cp ../Configs/profile $HOME/.profile
+cat ../Configs/ubuntu_profile | base64 -d >> $HOME/.profile
 cp ../Configs/tmux.conf $HOME/.tmux.conf
 echo
 echo
@@ -63,6 +63,7 @@ echo 'ssh-keygen -t rsa -b 4096 -C "your_email@gmail.com"'
 
 sudo chsh -s $(which zsh)
 source ~/.zshrc
+echo "source $HOME/.profile" >> $HOME/.zshrc
 
 ## ALIASES
 echo "Exporting Aliases"
