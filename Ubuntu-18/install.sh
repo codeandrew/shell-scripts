@@ -26,13 +26,6 @@ packages=(
   neofetch
 )
 
-
-
-desktop_packages=(
-  vlc
-  vlc-bin 
-)
-
 for package in "${packages[@]}"
 do
   echo "---------------------------------"
