@@ -17,8 +17,10 @@ packages=(
   fzf
   traceroute
   net-tools
+  netdiscover
   nmap
   zenmap
+  python-pip
   python3-pip
   ruby
   jq 
