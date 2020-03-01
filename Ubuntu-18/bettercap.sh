@@ -7,9 +7,13 @@ echo
 
 ls -latr
 
+sudo mv bettercap /usr/local/bin
+
+
 sudo find / -name libpcap.so 2> /dev/null
 
 sudo ln -s /usr/lib/x86_64-linux-gnu/libpcap.so /usr/lib/x86_64-linux-gnu/libpcap.so.1
+
 sudo apt-get install libnetfilter-queue-dev
 
 echo
