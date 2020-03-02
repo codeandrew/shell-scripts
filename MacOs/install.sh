@@ -29,11 +29,9 @@ brew install tmux
 cp ../Configs/tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
 
-echo
-echo
-echo "Installing Gitlab Runner"
-sudo curl --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-darwin-amd64
-sudo chmod +x /usr/local/bin/gitlab-runner
+cp ../Configs/profile $HOME/.profile
+echo "source $HOME/.profile" > .zshrc
+
 
 echo
 echo
