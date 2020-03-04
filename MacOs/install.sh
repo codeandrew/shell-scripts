@@ -45,6 +45,7 @@ npm install -g vtop
 Echo "Installing mdless"
 gem install mdless
 
+sudo easy_install pip
 
 echo
 echo
