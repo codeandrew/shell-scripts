@@ -9,7 +9,7 @@ packages=(
 )
 
 cask_packages=( 
-	docker minishift 
+	docker virtualbox kubectl minishift 
 )
 
 for package in "${packages[@]}"; do 
