@@ -1,0 +1,10 @@
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory level
+alias c='clear'                             # c:            Clear terminal display
+alias ~="cd ~"                              # ~:            Go Home
+mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
+
+export LC_ALL=en_US.UTF-8
+

@@ -1,19 +1,21 @@
-#!/bin/sh
+#!/bin/bash
 
 ## HOMEBREW 
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-##############################################################################
-
-packages=( ansible azure-cli bash-completion bat docker-machine docker-machine-driver-xhyve doctl freetype gdbm gettext glib ilmbase
-  imagemagick jpeg jq k9s kubernetes-cli kustomize libde265 libevent libffi libheif libidn2 libomp libpng libtiff libtool libunistring
-  libyaml little-cms2 lua ncurses neofetch netcat nvm oniguruma openexr openjpeg openshift-cli openssl@1.1 pcre perl python
-  readline ruby screenresolution shared-mime-info socat sqlite terraform tmux tree vim
-  webp wget x265 xz yq zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+cask_packages=( docker minishift 
+packages=(
+	ansible azure-cli bash-completion bat docker-machine docker-machine-driver-xhyve doctl freetype gdbm gettext glib ilmbase
+	imagemagick jpeg jq k9s kubernetes-cli kustomize libde265 libevent libffi libheif libidn2 libomp libpng libtiff libtool libunistring
+	libyaml little-cms2 lua ncurses neofetch netcat nvm oniguruma openexr openjpeg openshift-cli openssl@1.1 pcre perl python
+	readline ruby screenresolution shared-mime-info socat sqlite terraform tmux tree vim
+	webp wget x265 xz yq zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+	cmake libcap libnet
 )
 
-cask_packages=( docker minishift 
+cask_packages=( 
+	docker virtualbox kubectl minishift 
 )
 
 i=0
