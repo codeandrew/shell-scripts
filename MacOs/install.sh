@@ -6,73 +6,46 @@ echo "2019-07-11"
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing Python"
-brew install python
-echo "Installing Vim"
-brew install vim
-echo "Installing  Tree"
-brew install tree
+packages=(
+  python
+  vim
+  tree 
+  tmux 
+  nvm
+)
+
+for package in "${packages[@]}"; do 
+  echo "---------------------------------------------------------------------"
+  echo "installing $package" 
+  brew install $package
+  echo 
+  echo "---------------------------------------------------------------------"
+done
 
 echo "Generating ssh keygen"
 ssh-keygen -t rsa
 
-echo "Installing Bash Completion"
-brew install bash-completion
+cp ../Configs/tmux.conf $HOME/.tmux.conf
+tmux source-file $HOME/.tmux.conf
 
 echo "Installing Oh My Z Shell"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-
-echo "Installing tmux"
-brew install tmux
-
-cp ../Configs/tmux.conf $HOME/.tmux.conf
-tmux source-file $HOME/.tmux.conf
-
-echo
-echo
-echo "Installing Gitlab Runner"
-sudo curl --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-darwin-amd64
-sudo chmod +x /usr/local/bin/gitlab-runner
-
-echo
-echo
-echo "Installing Docker"
-brew cask install docker
-
-echo
-echo
-echo "Installing Virtual Box"
-brew cask install virtualbox
-echo
-echo
-echo "Allow Oracle Inc in Privacy and Security Policy"
-
-echo
-echo
-echo "Installing kubernetes"
-brew install kubectl
-
-echo
-echo
-echo "Installing Minikube"
-brew cask install minikube
+cp ../Configs/profile $HOME/.profile
+echo "source $HOME/.profile" > .zshrc
 
 
 echo "Installing NVM"
-brew install nvm
 nvm install --latest-npm
 nvm install 10
 
 echo "Installing Vtop"
 npm install -g vtop
 
-
-echo
-echo
 Echo "Installing mdless"
 gem install mdless
 
+sudo easy_install pip
 
 echo
 echo
