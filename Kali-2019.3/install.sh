@@ -1,10 +1,14 @@
 #!/bin/sh
 
 echo $(cat ./sources.list) >> /etc/apt/sources.list
+
 apt-get update -y
+apt-get full-upgrade -y
+
 packages=(
   beef-xss
 )
+
 for package in "${packages[@]}"
 do
   echo "---------------------------------"
