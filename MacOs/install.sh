@@ -3,6 +3,8 @@ echo "Last Working Date: "
 echo "2019-03-22"
 echo "2019-07-11"
 
+EMAIL="jeanandrewfuentes@gmail.com"
+
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
