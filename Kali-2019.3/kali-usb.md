@@ -39,10 +39,10 @@ sudo cryptsetup --verbose --verify-passphrase luksFormat /dev/sdb3
 sudo cryptsetup luksOpen /dev/sdb3 kali
 ```
 
-Create the ext3 filesystem, and label it “persistence
+Create the ext4 filesystem, and label it “persistence
 
 ```bash
-sudo mkfs.ext3 -L persistence  /dev/mapper/kali
+sudo mkfs.ext4 -L persistence  /dev/mapper/kali
 sudo e2label /dev/mapper/kali persistence
 ```
 
@@ -60,3 +60,59 @@ Close the encrypted channel to our persistence partition.
 ```bash
 cryptsetup luksClose /dev/mapper/kali
 ```
+
+
+## Boot To Live Kali After DD
+
+Get Flash Drive Path
+```bash
+fdisk -l
+```
+> In this case it's /dev/sdb
+
+
+Create Primary Partition
+```bash
+fdisk /dev/sdb
+- n
+- p
+- w
+```
+
+Check the partition if it's created
+```bash
+fdisk -l 
+```
+
+Now we're going to encrypt the new partition
+```bash
+cryptsetup --verbose --verify-passphrase luksFormat /dev/sdb3
+- YES
+- $YOURPASSPHRASE
+```
+
+After Encrypting we need to open the partition for further configuration
+```bash
+cryptsetup luksOpen /dev/sdb3 kali
+```
+
+We makee ext4 partition and map it
+```bash
+mkfs.ext4 -L persistence  /dev/mapper/kali
+```
+
+Now we label and configure persitence
+```bash
+e2label /dev/mapper/kali persistence
+sudo mkdir -p /mnt/kali
+sudo mount /dev/mapper/kali /mnt/kali
+echo "/ union" > /mnt/kali/persitence.conf
+umount /dev/mapper/kali
+```
+
+Close luks
+```bash
+cryptsetup luksClose /dev/sdb3 kali
+```
+
+Now boot to live encrypted persistence
