@@ -1,0 +1,71 @@
+#!/bin/bash
+
+sudo yum update
+
+## PACKAGES
+packages=(
+  epel-release
+  python-pip
+  python3
+  python3-pip
+  git
+  git-core
+  build-essential
+  openssl
+  unzip
+  libssl-dev
+  tmux
+  vim
+  xclip
+  fzf
+  net-tools
+  ruby
+  jq 
+  yq  
+  neofetch
+)
+
+for package in "${packages[@]}"
+do
+  echo "---------------------------------"
+  echo "Installing $package"
+  echo
+  sudo yum -y install $package
+  echo
+  echo "---------------------------------"
+  echo
+  echo
+done
+
+sleep 2
+
+## CONFIGS
+
+echo "Copying Configs ..."
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+cat ../Configs/ubuntu_profile | base64 -d >> $HOME/.profile
+cp ../Configs/tmux.conf $HOME/.tmux.conf
+echo
+echo
+
+sleep 2
+
+## For SSH Key
+echo '[!!]'
+echo 'Dont Forget to create ssh key'
+echo 'ssh-keygen -t rsa -b 4096 -C "your_email@gmail.com"'
+
+sudo chsh -s $(which zsh)
+source ~/.zshrc
+echo "source $HOME/.profile" >> $HOME/.zshrc
+
+## ALIASES
+echo "Exporting Aliases"
+echo "alias pbcopy='xclip -selection clipboard'" >> $HOME/.profile
+echo "alias pwdc='pwd | xclip -selection clipboard'" >> $HOME/.profile
+echo
+echo
+
+
+sudo update-alternatives --config editor
