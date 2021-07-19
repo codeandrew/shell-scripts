@@ -4,7 +4,6 @@
 echo "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-cask_packages=( docker minishift 
 packages=(
 	ansible azure-cli bash-completion bat docker-machine docker-machine-driver-xhyve doctl freetype gdbm gettext glib ilmbase
 	imagemagick jpeg jq k9s kubernetes-cli kustomize libde265 libevent libffi libheif libidn2 libomp libpng libtiff libtool libunistring

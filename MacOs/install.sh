@@ -33,9 +33,8 @@ tmux source-file $HOME/.tmux.conf
 echo "Installing Oh My Z Shell"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-cp ../Configs/profile $HOME/.profile
-echo "source $HOME/.profile" > .zshrc
-
+cp ../Configs/mac_profile $HOME/.myprofile
+echo "source $HOME/.myprofile" >> $HOME/.zshrc
 
 echo "Installing NVM"
 nvm install --latest-npm
