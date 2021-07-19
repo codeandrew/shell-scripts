@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# ================================================================
+# Common Commands
+# ================================================================
+
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory level
+alias c='clear'                             # c:            Clear terminal display
+alias ~="cd ~"                              # ~:            Go Home
+mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
+alias src='source ~/.myprofile'
+
+alias pwdc='pwd | pbcopy'
+
+
+
+export SS_PATH=$HOME/Pictures/SS
+
+clean(){
+    cd $HOME/Desktop
+    echo "Cleaning Screenshots"
+    mv Screen* $SS_PATH
+}
+
+export LC_ALL=en_US.UTF-8
+
+
+
+# ================================================================
+# Sytem administration commands
+# ================================================================
+
+alias hsg="history | grep "
+
+# other
+alias myip='curl -s http://ip-api.com'
+
+# ================================================================
+# Functions
+# ================================================================
+
+ip_forward(){
+  if [ $1 == 'on'] 
+  then 
+    sudo echo 1 > /proc/sys/net/ipv4/ip_forward
+    echo "forwarding is on"
+    cat /proc/sys/net/ipv4/ip_forward
+  else 
+    sudo echo 0 > /proc/sys/net/ipv4/ip_forward
+    echo "forwarding is off"
+    cat /proc/sys/net/ipv4/ip_forward
+  fi 
+}
+
+speedtest(){
+   curl -s https://raw.githubusercontent.com/codeandrew/speedtest-cli/master/speedtest.py | python -
+}
+
+extract() {
+    if [[ -z "$1" ]]; then
+        # display usage if no parameters given
+        echo "Usage: extract <archive file>"
+        return 1
+    else
+        for n in "$@"; do
+            if [[ -f "$n" ]]; then
+                case "${n%,}" in
+                    *.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
+                                tar xvf "$n"       ;;
+                    *.lzma)     unlzma ./"$n"      ;;
+                    *.bz2)      bunzip2 ./"$n"     ;;
+                    *.rar)      unrar x -ad ./"$n" ;;
+                    *.gz)       gunzip ./"$n"      ;;
+                    *.zip)      unzip ./"$n"       ;;
+                    *.z)        uncompress ./"$n"  ;;
+                    *.7z|*.arj|*.cab|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.rpm|*.udf|*.wim|*.xar)
+                                7z x ./"$n"        ;;
+                    *.xz)       unxz ./"$n"        ;;
+                    *.exe)      cabextract ./"$n"  ;;
+                    *)
+                echo "extract: '$n' - unknown archive format"
+                return 1
+                esac
+            else
+                echo "'$n' - file does not exist"
+                return 1
+            fi
+        done
+    fi
+}
+
+# ================================================================
+# Security Commands
+# ================================================================
+
+alias scan="nmap -T4 -F 192.168.100.1/24" # Light Scan
+
+
