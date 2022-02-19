@@ -56,9 +56,4 @@ cp ../Configs/tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
 
 echo "Installing NVM"
-nvm install --latest-npm
-nvm install 10
-
-echo "Installing Vtop"
-npm install -g vtop
-
+./nodejs.sh
