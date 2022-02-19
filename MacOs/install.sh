@@ -3,9 +3,35 @@ echo "Last Working Date: "
 echo "2019-03-22"
 echo "2019-07-11"
 
-EMAIL="jeanandrewfuentes@gmail.com"
+banner(){
+  echo; echo;
+  MSG=$1
+  echo "#==============================================================="
+  echo "$MSG"
+  echo "#==============================================================="
+}
 
-echo "Installing Homebrew"
+# PROFILE
+banner "# I - PROFILE SETUP"
+
+EMAIL="jeanandrewfuentes@gmail.com"
+NAME="Jean Andrew Fuentes"
+
+echo "Installing Oh My Z Shell"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+cp ../Configs/mac_profile $HOME/.myprofile
+cp -rf .zshrc $HOME/.zshrc
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git config --global user.email "$EMAIL"
+git config --global user.name "$NAME"
+
+echo "Generating ssh keygen"
+ssh-keygen -t rsa
+
+# BREW PACKAGES
+banner "Installing Homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 packages=(
@@ -13,7 +39,9 @@ packages=(
   vim
   tree 
   tmux 
-  nvm
+  azure-cli
+  netcat 
+  jq yq
 )
 
 for package in "${packages[@]}"; do 
@@ -24,17 +52,8 @@ for package in "${packages[@]}"; do
   echo "---------------------------------------------------------------------"
 done
 
-echo "Generating ssh keygen"
-ssh-keygen -t rsa
-
 cp ../Configs/tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
-
-echo "Installing Oh My Z Shell"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-cp ../Configs/mac_profile $HOME/.myprofile
-echo "source $HOME/.myprofile" >> $HOME/.zshrc
 
 echo "Installing NVM"
 nvm install --latest-npm
@@ -43,15 +62,3 @@ nvm install 10
 echo "Installing Vtop"
 npm install -g vtop
 
-Echo "Installing mdless"
-gem install mdless
-
-sudo easy_install pip
-
-echo
-echo
-echo
-echo
-echo "In .zshrc:"
-echo "change ZSH_THEME=robbyrussell to"
-echo "ZSH_THEME=bira"
