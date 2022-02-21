@@ -28,7 +28,7 @@ git config --global user.email "$EMAIL"
 git config --global user.name "$NAME"
 
 echo "Generating ssh keygen"
-ssh-keygen -t rsa
+ssh-keygen -t rsa -b 4096 -C "$EMAIL"
 
 # BREW PACKAGES
 banner "Installing Homebrew"
