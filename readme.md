@@ -36,4 +36,8 @@ Find Files from the Root without error
 find / -name "flag*" 2>/dev/null 
 ```
 
+Search String Keyword from files
+```bash
+grep -rni "keyword" directory 
+```
 
