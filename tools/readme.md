@@ -72,3 +72,18 @@ The home directory for this user is：/home/jaf
 This user has permission to log in to the system
 ------------------------------
 ```
+
+
+Get System Performance
+```bash
+╰─$ bash get-system-performance.sh
+The physical memory usage (M) is：2582
+The total amount of physical memory (M) is：3923
+The number of cpu cores is：2
+The average load is： 0.09, 0.15, 0.13
+The CPU usage of the user state is：0.0
+The CPU utilization of the kernel state is：3.3
+The CPU usage for waiting I/O is：0.0
+The CPU usage for handling hard interrupts is：0.0
+The CPU usage for handling soft interrupts is：0.0
+```
