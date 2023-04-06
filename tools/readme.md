@@ -6,9 +6,12 @@ GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
 ```
 
 
+Get Process Info by ID
 ./get-pid-info.sh
-```
-╰─$ bash get-pid-info.sh                                                                                            1 ↵
+
+```bash
+╰─$ bash get-proccess-info-by-id.sh
+
 Please enter the PID to be queried: 211686
 --------------------------------
 Process PID: 211686
@@ -25,8 +28,9 @@ Process Shared Memory：25784
 ```
 
 
-```
-╰─$ bash display-pid-info.sh
+Get Process Info By Name
+```bash
+╰─$ bash get-process-info-by-name.sh
 Please enter the name of the process to be queried：tmux
 ***************************************************************
 Process PID: 211686
