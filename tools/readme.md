@@ -58,3 +58,17 @@ Process Shared Memory：3692
 ***************************************************************
 
 ```
+
+Get info by user
+```
+╰─$ bash get-info-by-user.sh
+Please enter the user name to be queried：jaf
+------------------------------
+The user's username：jaf
+UID of this user：1000
+The group for this user is：groups=1000(jaf),27(sudo),117(admin),999(docker)
+The GID of this user is：1000
+The home directory for this user is：/home/jaf
+This user has permission to log in to the system
+------------------------------
+```
