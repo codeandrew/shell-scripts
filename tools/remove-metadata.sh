@@ -16,7 +16,7 @@ case "$MIME_TYPE" in
     exiftool -Creator= -LastModifiedBy= -Created= -Modified= -Company= -TotalEditTime= -Revision= -overwrite_original "$FILE"
     ;;
   image/jpeg|image/png)
-    exiftool -Artist= -Copyright= -DateTimeOriginal= -GPSLatitude= -GPSLongitude= -GPSAltitude= -Make= -Model= -Software= -UserComment= -overwrite_original "$FILE"
+    exiftool -Artist= -Copyright= -DateTimeOriginal= -GPS*= -HostComputer= -ProfileCreator= -Make= -Model= -Software= -UserComment= -overwrite_original "$FILE"
     ;;
   *)
     echo "Unsupported file type: $MIME_TYPE"
