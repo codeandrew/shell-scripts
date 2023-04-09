@@ -10,13 +10,13 @@ MIME_TYPE=$(file -b --mime-type "$FILE")
 
 case "$MIME_TYPE" in
   application/pdf)
-    exiftool -all= -overwrite_original "$FILE"
+    exiftool -Author= -Creator= -Producer= -CreationDate= -ModDate= -overwrite_original "$FILE"
     ;;
   application/vnd.openxmlformats-officedocument.wordprocessingml.document)
-    exiftool -all= -overwrite_original "$FILE"
+    exiftool -Creator= -LastModifiedBy= -Created= -Modified= -Company= -TotalEditTime= -Revision= -overwrite_original "$FILE"
     ;;
   image/jpeg|image/png)
-    exiftool -all= -overwrite_original "$FILE"
+    exiftool -Artist= -Copyright= -DateTimeOriginal= -GPSLatitude= -GPSLongitude= -GPSAltitude= -Make= -Model= -Software= -UserComment= -overwrite_original "$FILE"
     ;;
   *)
     echo "Unsupported file type: $MIME_TYPE"
