@@ -60,7 +60,7 @@ Process Shared Memory：3692
 ```
 
 Get info by user
-```
+```bash
 ╰─$ bash get-info-by-user.sh
 Please enter the user name to be queried：jaf
 ------------------------------
@@ -86,4 +86,15 @@ The CPU utilization of the kernel state is：3.3
 The CPU usage for waiting I/O is：0.0
 The CPU usage for handling hard interrupts is：0.0
 The CPU usage for handling soft interrupts is：0.0
+```
+
+
+Remove Metadata
+```
+╰─$ bash remove-metadata.sh IMG_7043.JPG
+Warning: Sorry, ProfileCreator is not writable
+Warning: [minor] Maker notes could not be parsed - IMG_7043.JPG
+    1 image files updated
+Metadata removed from IMG_7043.JPG.
+
 ```
