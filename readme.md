@@ -62,3 +62,17 @@ python hello.py >output.txt 2>&1        # stdout and stderr to (file), equivalen
 python hello.py &>/dev/null             # stdout and stderr to (null)
 echo "$0: warning: too many users" >&2  # print diagnostic message to stderr
 ```
+
+
+## PROCESSES 101
+
+`ps aux`: To see the processes run by other users and those that don't run from a session (i.e. system processes)
+
+`kill 1337`
+You can send signals that terminate processes; there are a variety of types of signals that correlate to exactly how "cleanly" the process is dealt with by the kernel
+
+Below are some of the signals that we can send to a process when it is killed:
+
+- SIGTERM - Kill the process, but allow it to do some cleanup tasks beforehand
+- SIGKILL - Kill the process - doesn't do any cleanup after the fact
+- SIGSTOP - Stop/suspend a process
