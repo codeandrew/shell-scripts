@@ -95,3 +95,15 @@ We can do four options with `systemctl`:
 - Enable
 - Disable
 
+## Logs
+In general most logs are stored here `/var/log/`
+
+### UBUNTU
+- `/var/log/syslog`: which contains a wide range of system messages, including authentication attempts and other system events.
+- `/var/log/auth.log`: authentication and authorization related messages on Ubuntu
+### CENTOS
+- `/var/log/messages`: contains system messages, including authentication attempts and other system events
+- `/var/log/secure`: contains authentication and authorization related messages on CentOS
+
+
+
