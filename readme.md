@@ -76,3 +76,13 @@ Below are some of the signals that we can send to a process when it is killed:
 - SIGTERM - Kill the process, but allow it to do some cleanup tasks beforehand
 - SIGKILL - Kill the process - doesn't do any cleanup after the fact
 - SIGSTOP - Stop/suspend a process
+
+
+**How do Processes Start?**
+
+Let's start off by talking about namespaces. The Operating System (OS) uses namespaces to ultimately split up the resources available on the computer to (such as CPU, RAM and priority) processes. Think of it as splitting your computer up into slices -- similar to a cake. Processes within that slice will have access to a certain amount of computing power, however, it will be a small portion of what is actually available to every process overall.
+
+Namespaces are great for security as it is a way of isolating processes from another -- only those that are in the same namespace will be able to see each other.
+
+
+
