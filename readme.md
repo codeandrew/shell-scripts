@@ -84,5 +84,14 @@ Let's start off by talking about namespaces. The Operating System (OS) uses name
 
 Namespaces are great for security as it is a way of isolating processes from another -- only those that are in the same namespace will be able to see each other.
 
+**Getting Processes/Services to Start on Boot**
 
+Some applications can be started on the boot of the system that we own. For example, web servers, database servers or file transfer servers. This software is often critical and is often told to start during the boot-up of the system by administrators.
+
+`systemctl [option] [service]`
+We can do four options with `systemctl`:
+- Start
+- Stop
+- Enable
+- Disable
 
