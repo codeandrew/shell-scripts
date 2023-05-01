@@ -99,9 +99,11 @@ We can do four options with `systemctl`:
 In general most logs are stored here `/var/log/`
 
 ### UBUNTU
+important logs to check in ubuntu
 - `/var/log/syslog`: which contains a wide range of system messages, including authentication attempts and other system events.
 - `/var/log/auth.log`: authentication and authorization related messages on Ubuntu
 ### CENTOS
+important logs to check in centos
 - `/var/log/messages`: contains system messages, including authentication attempts and other system events
 - `/var/log/secure`: contains authentication and authorization related messages on CentOS
 
