@@ -82,6 +82,16 @@ echo "$0: warning: too many users" >&2  # print diagnostic message to stderr
 | -r FILE   | FILE exists and read permission is granted                |
 | -s FILE   | FILE exists and has a size greater than zero              |
 
+Examples:
+
+- Check if the file /home/user/file.txt exists and is a regular file: if [ -f /home/user/file.txt ]; then echo "File exists"; fi
+- Check if the directory /home/user exists and is a directory: if [ -d /home/user ]; then echo "Directory exists"; fi
+- Check if the file /home/user/file.txt exists, is a regular file, and has read permission: if [ -f /home/user/file.txt ] && [ -r /home/user/file.txt ]; then echo "File exists and is readable"; fi
+
+
+
+
+
 
 ## PROCESSES 101
 
