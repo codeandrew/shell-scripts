@@ -72,6 +72,17 @@ echo "$0: warning: too many users" >&2  # print diagnostic message to stderr
 |    -lt   |         Checks if the value of left operand is less than the value of right operand; if yes, then the condition becomes true.        |
 |    -ge   | Checks if the value of left operand is greater than or equal to the value of right operand; if yes, then the condition becomes true. |
 
+| Bash Flag | Description                                               |
+|-----------|-----------------------------------------------------------|
+| -w FILE   | FILE exists and write permission is granted               |
+| -x FILE   | FILE exists and execute (or search) permission is granted |
+| -d FILE   | FILE exists and is a directory                            |
+| -e FILE   | FILE exists                                               |
+| -f FILE   | FILE exists and is a regular file                         |
+| -r FILE   | FILE exists and read permission is granted                |
+| -s FILE   | FILE exists and has a size greater than zero              |
+
+
 ## PROCESSES 101
 
 `ps aux`: To see the processes run by other users and those that don't run from a session (i.e. system processes)
