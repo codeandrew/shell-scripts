@@ -72,6 +72,7 @@ echo "$0: warning: too many users" >&2  # print diagnostic message to stderr
 |    -lt   |         Checks if the value of left operand is less than the value of right operand; if yes, then the condition becomes true.        |
 |    -ge   | Checks if the value of left operand is greater than or equal to the value of right operand; if yes, then the condition becomes true. |
 
+Examples
 ```bash
 [ 1 -eq 1 ] && echo "1 is equal to 1" - checks if 1 is equal to 1, and if it is, it will print "1 is equal to 1"
 [ 1 -ne 2 ] && echo "1 is not equal to 2" - checks if 1 is not equal to 2, and if it is not, it will print "1 is not equal to 2"
@@ -95,9 +96,9 @@ echo "$0: warning: too many users" >&2  # print diagnostic message to stderr
 
 Examples:
 
-- Check if the file /home/user/file.txt exists and is a regular file: if [ -f /home/user/file.txt ]; then echo "File exists"; fi
-- Check if the directory /home/user exists and is a directory: if [ -d /home/user ]; then echo "Directory exists"; fi
-- Check if the file /home/user/file.txt exists, is a regular file, and has read permission: if [ -f /home/user/file.txt ] && [ -r /home/user/file.txt ]; then echo "File exists and is readable"; fi
+- Check if the file /home/user/file.txt exists and is a regular file:` if [ -f /home/user/file.txt ]; then echo "File exists"; fi`
+- Check if the directory /home/user exists and is a directory: `if [ -d /home/user ]; then echo "Directory exists"; fi`
+- Check if the file /home/user/file.txt exists, is a regular file, and has read permission: `if [ -f /home/user/file.txt ] && [ -r /home/user/file.txt ]; then echo "File exists and is readable"; fi`
 
 
 
