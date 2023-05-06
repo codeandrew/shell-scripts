@@ -63,6 +63,14 @@ python hello.py &>/dev/null             # stdout and stderr to (null)
 echo "$0: warning: too many users" >&2  # print diagnostic message to stderr
 ```
 
+### Conditionals and Operands
+| Operator |                                                              Description                                                             |
+|:--------:|:------------------------------------------------------------------------------------------------------------------------------------:|
+|    -eq   |                    Checks if the value of two operands are equal or not; if yes, then the condition becomes true.                    |
+|    -ne   |            Checks if the value of two operands are equal or not; if values are not equal, then the condition becomes true.           |
+|    -gt   |       Checks if the value of left operand is greater than the value of right operand; if yes, then the condition becomes true.       |
+|    -lt   |         Checks if the value of left operand is less than the value of right operand; if yes, then the condition becomes true.        |
+|    -ge   | Checks if the value of left operand is greater than or equal to the value of right operand; if yes, then the condition becomes true. |
 
 ## PROCESSES 101
 
