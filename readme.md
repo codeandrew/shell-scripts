@@ -72,6 +72,17 @@ echo "$0: warning: too many users" >&2  # print diagnostic message to stderr
 |    -lt   |         Checks if the value of left operand is less than the value of right operand; if yes, then the condition becomes true.        |
 |    -ge   | Checks if the value of left operand is greater than or equal to the value of right operand; if yes, then the condition becomes true. |
 
+```bash
+[ 1 -eq 1 ] && echo "1 is equal to 1" - checks if 1 is equal to 1, and if it is, it will print "1 is equal to 1"
+[ 1 -ne 2 ] && echo "1 is not equal to 2" - checks if 1 is not equal to 2, and if it is not, it will print "1 is not equal to 2"
+[ 2 -gt 1 ] && echo "2 is greater than 1" - checks if 2 is greater than 1, and if it is, it will print "2 is greater than 1"
+[ 1 -lt 2 ] && echo "1 is less than 2" - checks if 1 is less than 2, and if it is, it will print "1 is less than 2"
+[ 2 -ge 2 ] && echo "2 is greater than or equal to 2" - checks if 2 is greater than or equal to 2, and if it is, it will print "2 is greater than or equal to 2"
+```
+
+
+
+
 | Bash Flag | Description                                               |
 |-----------|-----------------------------------------------------------|
 | -w FILE   | FILE exists and write permission is granted               |
