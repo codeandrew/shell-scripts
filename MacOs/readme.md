@@ -1,5 +1,9 @@
 # MacOs Setup
-
+## MAC UPDATES
+To manually update packages 
+```
+softwareupdate --all --install --force
+```
 #### Contents
 - Homebrew
 - Bash Completion
