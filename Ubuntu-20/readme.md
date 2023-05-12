@@ -33,4 +33,8 @@ Start a new terminal session.
 
 ```
 curl https://get.docker.com | bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+docker run hello-world
 ```
+
