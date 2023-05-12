@@ -29,3 +29,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 Start a new terminal session.
 
 
+## DOCKER 
+
+```
+curl https://get.docker.com | bash
+```
