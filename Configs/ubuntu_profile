@@ -91,4 +91,7 @@ extract() {
 
 alias scan="nmap -T4 -F 192.168.100.1/24" # Light Scan
 
+function get_suid(){
+  find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
+}
 
