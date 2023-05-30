@@ -21,6 +21,9 @@ git config --global user.name "${NAME}"
 packages=(
   git-core
   build-essential
+  wget
+  curl
+  vim
   openssl
   unzip
   libssl-dev
