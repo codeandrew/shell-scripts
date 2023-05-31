@@ -20,6 +20,7 @@ git config --global user.name "${NAME}"
 ####################################
 packages=(
   git-core
+  coreutils
   build-essential
   wget
   curl
@@ -71,11 +72,22 @@ cp ../Configs/tmux.conf $HOME/.tmux.conf
 echo
 echo
 
-sleep 2
+####################################
+## SpaceVim
+####################################
 
-sudo chsh -s $(which zsh)
-source ~/.zshrc
-echo "source $HOME/.myprofile" >> $HOME/.zshrc
+echo "[+] Install SpaceVim"
+curl -sLf https://spacevim.org/install.sh | bash
+mkdir -p ~/.SpaceVim/autoload/
+mkdir -p  ~/.SpaceVim.d/
+
+wget https://raw.githubusercontent.com/codeandrew/shell-scripts/master/SpaceVim/init.toml 
+mv init.toml  ~/.SpaceVim.d/init.toml
+
+wget https://raw.githubusercontent.com/codeandrew/shell-scripts/master/SpaceVim/autoload/myspacevim.vim
+mv myspacevim.vim ~/.SpaceVim/autoload/
+
+sleep 2
 
 ####################################
 ## Node JS
@@ -86,4 +98,15 @@ cat ./nvm.cfg >> $HOME/.myprofile
 source ~/.myprofile
 nvm install node
 
+
 sudo update-alternatives --config editor
+
+echo "source $HOME/.myprofile" >> $HOME/.zshrc
+
+
+echo "[!] Do this this manually"
+
+echo "sudo chsh -s $(which zsh)"
+echo "source ~/.zshrc"
+echo 'grep $(whoami) /etc/passwd'
+echo "make sure to relogin and check your shell"
