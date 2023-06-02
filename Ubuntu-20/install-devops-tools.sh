@@ -4,7 +4,6 @@ echo "[+] Installing Docker"
 curl https://get.docker.com | bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
-$(echo $SHELL)
 docker run hello-world
 
 echo "[+] Installing Kubectl"
