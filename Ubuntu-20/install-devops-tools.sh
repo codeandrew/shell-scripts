@@ -3,7 +3,7 @@
 echo "[+] Installing Docker"
 curl https://get.docker.com | bash
 sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo usermod -aG docker ${USER}
 docker run hello-world
 
 echo "[+] Installing Kubectl"
@@ -29,3 +29,7 @@ aws --version
 echo "[+] Installing Azure CLI"
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
+
+
+echo "[+] Need to relogin and check id"
+echo "su - ${USER}"
