@@ -102,10 +102,9 @@ nvm install node
 sudo update-alternatives --config editor
 
 echo "source $HOME/.myprofile" >> $HOME/.zshrc
-
+echo "zsh" >> $HOME/.bashrc
 
 echo "[!] Do this this manually"
-
 echo "sudo chsh -s $(which zsh)"
 echo "source ~/.zshrc"
 echo 'grep $(whoami) /etc/passwd'
