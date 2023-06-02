@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "[+] Installing Docker"
 curl https://get.docker.com | bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -18,4 +19,7 @@ sudo ./aws/install
 which aws
 aws --version
 
+
+echo "[+] Installing Azure CLI"
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
