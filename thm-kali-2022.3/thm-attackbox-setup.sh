@@ -2,7 +2,8 @@
 
 sudo apt install -y \
   coreutils \
-  tmux
+  tmux \
+  x-clip
   
 wget https://raw.githubusercontent.com/codeandrew/shell-scripts/master/Configs/ubuntu_profile 
 mv ubuntu_profile ~/.myprofile
