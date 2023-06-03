@@ -6,6 +6,7 @@ sudo groupadd docker
 sudo usermod -aG docker ${USER}
 docker run hello-world
 
+
 echo "[+] Installing Kubectl"
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
@@ -17,6 +18,7 @@ kubectl version --client
 echo "[+] Installing Dive for Docker Investigations"
 wget https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb
 sudo apt install ./dive_0.9.2_linux_amd64.deb
+
 
 sudo apt install -y \
     python3-pip \
@@ -33,7 +35,6 @@ aws --version
 
 echo "[+] Installing Azure CLI"
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-
 
 
 echo "[+] Need to relogin and check id"
