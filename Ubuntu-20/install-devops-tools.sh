@@ -21,8 +21,7 @@ sudo apt install ./dive_0.9.2_linux_amd64.deb
 
 
 sudo apt install -y \
-    python3-pip \
-    kubectl \
+    python3-pip 
 
 
 echo "[+] Installing AWS CLI"
