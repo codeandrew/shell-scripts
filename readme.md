@@ -128,8 +128,22 @@ in this and some value two
 ones value three and value four.
 ```
 
+**Multi line Strings create file** 
+```
+cat >> /path/to/existingFile.text<< EOF
+some text line 1
+some text line 2
+some text line 3
+EOF
 
+#switch cat >> to cat > to create a file instead of append
+cat > /path/to/newFile.text<< EOF
+some text line 1
+some text line 2
+some text line 3
+EOF
 
+```
 
 ## PROCESSES 101
 
