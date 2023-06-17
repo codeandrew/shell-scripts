@@ -13,6 +13,7 @@ packages=(
   aircrack-ng
   dnsniff
   wireshark
+  smbclient
 )
 
 for package in "${packages[@]}"
@@ -28,3 +29,5 @@ do
 done
 
 
+wget https://raw.githubusercontent.com/CiscoCXSecurity/enum4linux/master/enum4linux.pl -O /usr/local/bin/enum4linux
+sudo chmod +x /usr/local/bin/enum4linux
