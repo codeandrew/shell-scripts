@@ -37,6 +37,7 @@ packages=(
   net-tools
   netdiscover
   fping
+  smbclient
   nmap
   zenmap
   python-pip
