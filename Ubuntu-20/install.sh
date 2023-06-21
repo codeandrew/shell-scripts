@@ -37,6 +37,7 @@ packages=(
   net-tools
   netdiscover
   fping
+  smbclient
   nmap
   zenmap
   python-pip
@@ -45,6 +46,7 @@ packages=(
   jq 
   yq  
   neofetch
+  language-pack-en
 )
 
 for package in "${packages[@]}"

@@ -100,10 +100,50 @@ Examples:
 - Check if the directory /home/user exists and is a directory: `if [ -d /home/user ]; then echo "Directory exists"; fi`
 - Check if the file /home/user/file.txt exists, is a regular file, and has read permission: `if [ -f /home/user/file.txt ] && [ -r /home/user/file.txt ]; then echo "File exists and is readable"; fi`
 
+## Strings
 
+**Multiline String and Interpolation**
+```bash
+#!/bin/sh
 
+placeholders="value one"
+different="value two"
+here="value three"
+there="value four"
 
+cat <<-_EOT_
+I have some
+text with ${placeholders}
+in this and some ${different}
+ones ${here} and ${there}.
+_EOT_
+```
+If executed:
 
+```bash
+$ sh ./script
+I have some
+text with value one
+in this and some value two
+ones value three and value four.
+```
+
+**Multi line Strings create file** 
+```
+cat >> /path/to/existingFile.text<< EOF
+some text line 1
+some text line 2
+some text line 3
+EOF
+
+#switch cat >> to cat > to create a file instead of append
+cat > /path/to/newFile.text<< EOF
+some text line 1
+some text line 2
+some text line 3
+EOF
+
+```
 
 ## PROCESSES 101
 
