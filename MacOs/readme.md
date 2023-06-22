@@ -1,5 +1,17 @@
 # MacOs Setup
-
+## MAC UPDATES
+To manually update packages 
+```
+softwareupdate --all --install --force
+```
+To delete exising clis
+```
+sudo rm -rf /Library/Developer/CommandLineTools
+```
+Re Install CLI tools
+```
+sudo xcode-select --install
+```
 #### Contents
 - Homebrew
 - Bash Completion

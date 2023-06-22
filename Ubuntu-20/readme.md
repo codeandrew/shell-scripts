@@ -29,3 +29,16 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 Start a new terminal session.
 
 
+## DOCKER 
+
+Install docker without sudo 
+```
+curl https://get.docker.com | bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+docker run hello-world
+```
+
+logout and login to refresh
+
+
