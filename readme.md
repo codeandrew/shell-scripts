@@ -19,6 +19,7 @@ TBA
 
 
 ## CHEATSHEET
+
 > BASH CheatSheet 
 
 Copy Files with Progress Bar
@@ -40,4 +41,34 @@ Search String Keyword from files
 ```bash
 grep -rni "keyword" directory 
 ```
+
+get disk size of files, summarizing disk usages
+```bash
+du -sh *
+
+# include hidden files
+du -sh .[!.]* *
+```
+
+
+get system information
+get cpu info
+```bash 
+lscpu
+--- 
+Architecture:            x86_64
+  CPU op-mode(s):        32-bit, 64-bit
+  Address sizes:         40 bits physical, 48 bits virtual
+  Byte Order:            Little Endian
+CPU(s):                  2
+  On-line CPU(s) list:   0,1
+Vendor ID:               AuthenticAMD
+  Model name:            DO-Premium-AMD
+    CPU family:          23
+    Model:               49
+    Thread(s) per core:  1
+    Core(s) per socket:  2
+
+```
+
 
