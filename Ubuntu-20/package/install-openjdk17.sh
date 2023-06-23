@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt update
-sudo apt install openjdk-17-jdk -y
+sudo apt install openjdk-17-jdk maven -y
 
 # Set JAVA_HOME environment variable
 ENV_HOME=$HOME/.bashrc
@@ -12,3 +12,4 @@ source ~/.bashrc
 echo "JAVA_HOME is set to: $JAVA_HOME"
 # Verify the installation
 java -version
+mvn -version
