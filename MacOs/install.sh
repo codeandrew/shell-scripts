@@ -59,5 +59,7 @@ one
 cp ../Configs/tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
 
+echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH"' >> ~/.zshrc
+
 echo "Installing NVM"
 ./nodejs.sh
