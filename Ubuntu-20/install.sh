@@ -45,6 +45,7 @@ packages=(
   jq 
   yq  
   neofetch
+  mysql-client
   language-pack-en
 )
 
