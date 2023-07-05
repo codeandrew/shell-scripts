@@ -19,7 +19,6 @@ TBA
 
 
 ## CHEATSHEET
-
 > BASH CheatSheet 
 
 Copy Files with Progress Bar
@@ -49,6 +48,13 @@ du -sh *
 # include hidden files
 du -sh .[!.]* *
 ```
+
+
+Remove numbers in history
+```
+history | awk '{$1=""; print substr($0, 2)}'
+```
+
 
 
 get system information
