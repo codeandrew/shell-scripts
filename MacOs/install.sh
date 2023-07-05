@@ -14,14 +14,13 @@ banner(){
 # PROFILE
 banner "# I - PROFILE SETUP"
 
-EMAIL="jeanandrewfuentes@gmail.com"
-NAME="Jean Andrew Fuentes"
-
-echo "Installing Oh My Z Shell"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 cp ../Configs/mac_profile $HOME/.myprofile
+
+## install ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp -rf .zshrc $HOME/.zshrc
+
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 git config --global user.email "$EMAIL"
@@ -36,11 +35,16 @@ banner "Installing Homebrew"
 
 packages=(
   python
+  python3
   vim
   tree 
   tmux 
+  ffmpeg
   azure-cli
   netcat 
+  dive
+  exiftool
+  mysql-client
   jq yq
 )
 
@@ -50,7 +54,7 @@ for package in "${packages[@]}"; do
   brew install $package
   echo 
   echo "---------------------------------------------------------------------"
-done
+one
 
 cp ../Configs/tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
