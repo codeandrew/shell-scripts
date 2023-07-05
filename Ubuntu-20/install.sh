@@ -39,7 +39,6 @@ packages=(
   fping
   smbclient
   nmap
-  zenmap
   python-pip
   python3-pip
   ruby
