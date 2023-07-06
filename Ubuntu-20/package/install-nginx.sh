@@ -15,3 +15,9 @@ sudo sed -i 's|pid /run/nginx.pid;|pid /var/run/nginx.pid;|' /etc/nginx/nginx.co
 # Enable and start the Nginx service
 sudo systemctl enable nginx
 sudo systemctl start nginx
+
+
+
+
+# TEST YOUR DNS
+# https://toolbox.googleapps.com/apps/dig
