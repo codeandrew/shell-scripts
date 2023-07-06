@@ -54,7 +54,7 @@ do
   echo "---------------------------------"
   echo "Installing $package"
   echo
-  sudo apt -y install $package
+  sudo DEBIAN_FRONTEND=noninteractive apt -y install $package
   echo
   echo "---------------------------------"
   echo
