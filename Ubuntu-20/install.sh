@@ -22,6 +22,7 @@ packages=(
   git-core
   coreutils
   build-essential
+  ncal
   wget
   curl
   vim
@@ -38,6 +39,7 @@ packages=(
   netdiscover
   fping
   smbclient
+  nfs-common
   nmap
   python-pip
   python3-pip
