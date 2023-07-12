@@ -20,6 +20,11 @@ sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
 sudo reboot
 
 
+# For Configuring the internet
+# sudo netplan generate
+# sudo netplan apply
+# cat /usr/share/doc/netplan/examples/static.yaml
+
 
 # 
 # https://linuxhint.com/install-ubuntu-server-raspberry-pi/
