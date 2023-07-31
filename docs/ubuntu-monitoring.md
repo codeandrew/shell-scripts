@@ -17,3 +17,11 @@ systemctl start nginx
 strace nginx
 strings /usr/sbin/nginx
 ```
+
+## Network Monitoring
+
+### LSOF
+```
+sudo lsof -i
+# Check the port and dig deeper using PID 
+```
