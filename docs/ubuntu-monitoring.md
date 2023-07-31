@@ -25,3 +25,9 @@ strings /usr/sbin/nginx
 sudo lsof -i
 # Check the port and dig deeper using PID 
 ```
+
+### Netstat
+
+```
+sudo netstat -tupln
+```
