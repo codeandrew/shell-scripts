@@ -21,6 +21,7 @@ strings /usr/sbin/nginx
 ## Network Monitoring
 
 ### LSOF
+> list open files
 ```
 sudo lsof -i
 # Check the port and dig deeper using PID 
