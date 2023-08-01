@@ -21,6 +21,13 @@ TBA
 ## CHEATSHEET
 > BASH CheatSheet 
 
+Change User in Linux
+```bash
+sudo -u $USER /bin/bash
+# example
+sudo -u jenkins /bin/bash
+```
+
 Copy Files with Progress Bar
 ```bash
 rsync --progress source_file destination_directory/
