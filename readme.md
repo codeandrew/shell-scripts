@@ -235,5 +235,5 @@ important logs to check in centos
 ## Online Tools
 - explainshell.com
 - toolbox.googleapps.com/apps/dig
-
+- dnschecker.org - it takes time to propagate dns and in ingress make sure to check it first
   
