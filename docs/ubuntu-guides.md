@@ -114,5 +114,28 @@ The `-a` option in `rsync` is called "archive mode." This mode is a shortcut for
 So, essentially, archive mode is designed to preserve as much about the file as possible in the copy. It's commonly used for making backups and copying directories. It ensures that the copied files and directories retain their ownership, permissions, and timestamps, among other things.
 
 
+Examples:
+
+1. Copy file from local to remote:
+```bash
+rsync -avz file.txt user@remote:/path/
+```
+2. Copy directory from local to remote:
+```bash
+rsync -avz /local/dir/ user@remote:/path/
+```
+3. Copy directory from remote to local:
+```bash
+rsync -avz user@remote:/path/dir/ /local/dir/
+```
+4. Synchronize a local directory with a remote directory:
+```bash
+rsync -avz --delete /local/dir/ user@remote:/path/dir/
+```
+Flags: `-a` (archive mode), `-v` (verbose), `-z` (compress), `--delete` (delete extraneous files from destination dirs).
+
+Remember, rsync must be installed on both source and destination machines.
+
+
 
 
