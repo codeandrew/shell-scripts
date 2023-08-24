@@ -33,6 +33,15 @@ export filename=reports/network-enum-${version}.txt
 echo -e "[+] IP Config" | tee -a $filename
 ifconfig | tee -a $filename
 
+echo -e "\n[+] UFW" | tee -a $filename
+sudo ufw status | tee -a $filename
+
+echo -e "\n[+] IP FORWARDING" | tee -a $filename
+cat /proc/sys/net/ipv4/ip_forward | tee -a $filename
+
+echo -e "\n[+] NMAP" | tee -a $filename
+sudo nmap -sT localhost | tee -a $filename
+
 echo -e "\n[+] Network Statistics" | tee -a $filename
 sudo netstat -tuln | tee -a $filename
 
@@ -41,12 +50,3 @@ sudo ss -tulnp | tee -a $filename
 
 echo -e "\n[+] List Open Files" | tee -a $filename
 sudo lsof -i | tee -a $filename
-
-echo -e "\n[+] NMAP" | tee -a $filename
-sudo nmap -sT localhost | tee -a $filename
-
-echo -e "\n[+] UFW" | tee -a $filename
-sudo ufw status | tee -a $filename
-
-echo -e "\n[+] IP FORWARDING" | tee -a $filename
-cat /proc/sys/net/ipv4/ip_forward | tee -a $filename
