@@ -138,4 +138,22 @@ Remember, rsync must be installed on both source and destination machines.
 
 
 
+## Ubuntu Troubleshooting
+
+
+### Ubuntu Laptop - Suspend not working
+
+**WORKAROUND - Disable sleep/suspend**
+
+```
+# Run this first in the terminal
+systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
+
+# sudo vi /etc/systemd/logind.conf
+# change the HandleLidSwitch to hibernate
+HandleLidSwitch=hibernate 
+
+systemctl restart systemd-logind
+```
 
