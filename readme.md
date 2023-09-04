@@ -19,8 +19,14 @@ TBA
 
 
 ## CHEATSHEET
-
 > BASH CheatSheet 
+
+Change User in Linux
+```bash
+sudo -u $USER /bin/bash
+# example
+sudo -u jenkins /bin/bash
+```
 
 Copy Files with Progress Bar
 ```bash
@@ -49,6 +55,13 @@ du -sh *
 # include hidden files
 du -sh .[!.]* *
 ```
+
+
+Remove numbers in history
+```
+history | awk '{$1=""; print substr($0, 2)}'
+```
+
 
 
 get system information
@@ -221,3 +234,6 @@ important logs to check in centos
 
 ## Online Tools
 - explainshell.com
+- toolbox.googleapps.com/apps/dig
+- dnschecker.org - it takes time to propagate dns and in ingress make sure to check it first
+  

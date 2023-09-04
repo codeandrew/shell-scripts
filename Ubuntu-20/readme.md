@@ -42,3 +42,9 @@ docker run hello-world
 logout and login to refresh
 
 
+## Ubuntu System Settings
+
+```
+sudo apt install gnome-control-center
+gnome-control-center
+```

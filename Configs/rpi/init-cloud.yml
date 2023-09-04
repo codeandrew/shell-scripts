@@ -1,0 +1,11 @@
+wifis:
+  wlan0:
+    dhcp4: true
+    addresses: [192.168.0.99/24]
+    optional: true
+    access-points:
+      "Your WiFi Name":
+        password: "YourSecret"
+
+
+# https://sergejskozlovics.medium.com/how-to-set-up-a-wireless-ubuntu-server-on-raspberry-pi-89b84dca34d2
