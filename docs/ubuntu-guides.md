@@ -30,6 +30,31 @@ Based on the information provided, here's a suggested partition setup:
 You can use a partitioning tool like GParted (included in Ubuntu installation media) or the command-line tool `fdisk` or `parted` to create and manage the partitions during the Ubuntu installation process. Make sure to back up any important data before partitioning the disk.
 
 
+## Mounting
+
+To unmount and remount a USB drive properly on a Linux-based system, you can use the following commands:
+
+### To Unmount
+1. Identify the mount point with `df` or `lsblk`:
+    ```bash
+    df -h
+    ```
+    or
+    ```bash
+    lsblk
+    ```
+2. Unmount using `umount`:
+    ```bash
+    sudo umount /path/to/mount_point
+    ```
+### To Remount
+1. If the USB drive doesn't auto-mount, you can manually mount it like so:
+    ```bash
+    sudo mount /dev/sdXN /path/to/mount_point
+    ```
+Replace `/dev/sdXN` with your USB drive's device identifier and `/path/to/mount_point` with the directory where you want to mount it.
+
+**Note**: You can also use disk utilities like `gnome-disks` on GNOME or similar utilities on other desktop environments for a GUI-based approach.
 ## Networking
 
 ### Get Route Table
