@@ -17,3 +17,4 @@ sudo iwconfig wlp3s0 txpower 10dBm
 - https://gist.github.com/torresashjian/e97d954c7f1554b6a017f07d69a66374
 - https://www.amirootyet.com/post/how-to-get-wifi-to-work-after/
 - https://gist.github.com/rob-hills/9134b7352ee7471c4d4f4fbd6454c4b9
+- https://easylinuxtipsproject.blogspot.com/p/root-command-startup.html
