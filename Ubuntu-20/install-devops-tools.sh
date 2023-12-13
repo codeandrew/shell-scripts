@@ -21,8 +21,10 @@ sudo apt install ./dive_0.9.2_linux_amd64.deb
 
 
 sudo apt install -y \
-    python3-pip 
-
+    python3-pip \
+    dnsutils net-tools \
+    wget curl \
+    
 
 echo "[+] Installing AWS CLI"
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
