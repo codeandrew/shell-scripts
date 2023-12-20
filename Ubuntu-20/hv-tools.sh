@@ -7,6 +7,7 @@ packages=(
   build-essential
   libpcap-dev
   net-tools
+  zip
   ruby-dev
   ruby
   nmap
@@ -49,3 +50,12 @@ sudo ln -sf /opt/metasploit-framework/msfconsole /usr/local/bin/
 sudo ln -sf /opt/metasploit-framework/msfvenom /usr/local/bin/
 
 echo "Installation complete. You can now use Metasploit and msfvenom from any location in your terminal."
+
+
+echo "Downloading SecLists in /usr/share/wordlists"
+sudo mkdir -p /usr/share/wordlists
+cd /usr/share/wordlists
+sudo  wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip 
+sudo unzip SecList.zip
+sudo rm -f SecList.zip
+sudo chmod -R 755 /usr/share/wordlists
