@@ -187,6 +187,25 @@ EOF
 
 ```
 
+**Get Length of bash Array**
+```bash
+
+# Create files
+╭─j4f@ubuntu /tmp/demo
+╰─$ touch file-{1,2,3,4,5,6}.txt
+╭─j4f@ubuntu /tmp/demo
+╰─$ ls
+file-1.txt  file-2.txt  file-3.txt  file-4.txt  file-5.txt  file-6.txt
+
+# store files in a variable
+╭─j4f@ubuntu /tmp/demo
+╰─$ files=($(ls))
+# get length
+╭─j4f@ubuntu /tmp/demo
+╰─$ echo ${#files[@]}
+6
+```
+
 ## PROCESSES 101
 
 `ps aux`: To see the processes run by other users and those that don't run from a session (i.e. system processes)
