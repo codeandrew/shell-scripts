@@ -162,6 +162,25 @@ Flags: `-a` (archive mode), `-v` (verbose), `-z` (compress), `--delete` (delete 
 Remember, rsync must be installed on both source and destination machines.
 
 
+## Ubuntu Desktop Dell U2413 - Unsupported Audio Format, Please set the audio output on your audio player to pulse-code modulation (PCM) if Available
+> https://dragly.org/2011/10/13/fixing-the-volume-treshold-and-intervals-in-ubuntu-on-dell-xps-m1330/
+```bash
+sudo vim /etc/pulse/default.pa
+# Change the line that says
+load-module module-udev-detect
+#into
+load-module module-udev-detect ignore_dB=1
+# Save and close the file.
+
+# Now, let’s restart pulseaudio and open alsamixer in terminal
+
+pulseaudio -k
+alsamixer
+
+```
+
+
+
 
 ## Ubuntu Troubleshooting
 
