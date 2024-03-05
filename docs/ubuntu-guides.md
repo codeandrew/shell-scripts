@@ -196,7 +196,11 @@ systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.targe
 
 # sudo vi /etc/systemd/logind.conf
 # change the HandleLidSwitch to hibernate
-HandleLidSwitch=hibernate 
+HandleLidSwitch=hibernate
+
+
+## Ubuntu Macbook Port
+> https://gist.github.com/rob-hills/9134b7352ee7471c4d4f4fbd6454c4b9
 
 systemctl restart systemd-logind
 ```
