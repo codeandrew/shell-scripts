@@ -5,6 +5,7 @@ packages=(
   gobuster
   beef-xss
   build-essential
+  coreutils
   openssl
   unzip
   libssl-dev
@@ -37,3 +38,7 @@ echo
 echo
 
 echo "source $HOME/.myprofile" >> $HOME/.zshrc
+
+mkdir -p ~/repo 
+wget https://raw.githubusercontent.com/codeandrew/Kali-Linux-Dockerfile/master/scripts/auto-recon.sh  -O ~/repo/auto-recon.sh
+chmod +x ~/repo/auto-recon.sh
