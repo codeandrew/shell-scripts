@@ -26,7 +26,6 @@ mmcblk0     179:0    0  59.5G  0 disk
 
 ┌──(kali㉿wrench-rpi5)-[/media]
 └─$ sudo mkdir /mnt/usbdrive
-sudo: unable to resolve host wrench-rpi5: Name or service not known
 
 ┌──(kali㉿wrench-rpi5)-[/media]
 └─$ sudo mount /dev/sda1 /mnt/usbdrive
