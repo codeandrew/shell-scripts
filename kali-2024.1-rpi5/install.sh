@@ -34,6 +34,9 @@ do
 done
 
 
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+echo "source $HOME/.myprofile" >> $HOME/.zshrc
+
 cat ../Configs/ubuntu_profile >> $HOME/.myprofile
 cp ../Configs/tmux.conf $HOME/.tmux.conf
 echo
