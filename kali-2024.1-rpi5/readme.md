@@ -21,6 +21,56 @@ sudo vim /etc/systemd/timesyncd.conf
 NTP=pool.ntp.org
 ```
 
+## Enhanced Security Connection
+
+use SSH tunneling over RDP
+
+### SHH Tunneling for RDP
+
+```bash
+sudo apt-get update
+sudo apt-get install xrdp
+
+# xrdp
+sudo systemctl enable xrdp
+sudo systemctl start xrdp
+```
+
+now SSH 
+```bash
+ssh -L 3390:localhost:3389 username@raspberry_pi_ip
+```
+
+### Fail2Ban for Enhanced Security
+
+```bash
+sudo apt-get update
+sudo apt-get install fail2ban
+
+# Step 2: Configure Fail2Ban
+# Fail2Ban configurations can be done in /etc/fail2ban/jail.local file. 
+# If it doesn't exist, copy the default configuration file:
+sudo cp /etc/fail2ban/jail.{conf,local}
+
+sudo vi /etc/fail2ban/jail.local
+```
+
+Ensure you have the following section for SSH (it may already exist or you might need to add it):
+```
+[sshd]
+enabled = true
+port    = ssh
+filter  = sshd
+logpath = /var/log/auth.log
+maxretry = 5
+```
+
+Start Fail2Ban
+```bash
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+```
+
 ## Mount USB Devices
 
 ```bash
@@ -45,3 +95,5 @@ mmcblk0     179:0    0  59.5G  0 disk
 └─$ cd /mnt/usbdrive
 
 ```
+
+
