@@ -1,6 +1,26 @@
 # Ways to Connect to Kali
-
+- xrdp from ssh tunnel
 - kali in browser
+
+## xrdp from ssh tunneling
+
+```bash
+sudo apt-get update
+sudo apt-get install xrdp
+
+sudo systemctl enable xrdp
+sudo systemctl start xrdp
+```
+after installing and enabling xrdp in your kali machine,
+make an ssh tunnel with port forward to your client machine.
+```bash
+ssh -L 3390:localhost:3389 kali@raspberry_pi_ip
+```
+Now, use an RDP client (like Microsoft Remote Desktop on Windows, or Remmina on Linux) to connect to localhost:3390. 
+This connection will be securely tunneled to your Raspberry Pi's RDP server over SSH.
+
+
+
 
 ## Kali in Browser
 > https://www.kali.org/docs/general-use/novnc-kali-in-browser/
