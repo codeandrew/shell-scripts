@@ -2,6 +2,8 @@
 
 
 packages=(
+  util-linux
+  util-linux-extra
   gobuster
   beef-xss
   build-essential
