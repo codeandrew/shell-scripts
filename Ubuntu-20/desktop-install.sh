@@ -2,8 +2,7 @@
 export USER="jaf"
 
 sudo apt-get update && sudo apt-get dist-upgrade -y
-sudo apt-get install ubuntu-desktop ubuntu-gnome-desktop gnome-core xrdp
-
+sudo apt install remmina remmina-plugin-vnc xrdp
 
 adduser $USER
 usermod -aG admin $USER ; usermod -aG sudo $USER;
