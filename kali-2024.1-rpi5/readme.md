@@ -97,3 +97,32 @@ mmcblk0     179:0    0  59.5G  0 disk
 ```
 
 
+## WIFI CONNECTION
+
+
+```bash
+nmcli dev wifi  # list available wifi
+nmcli connection show --active
+
+
+nmcli dev disconnect wlan0 # disconnect if necessary
+nmcli dev wifi connect 'SSID' password 'PASSWORD' ifname wlan0 # connect to a new wifi 
+```
+
+### troubleshooting
+
+```
+sudo systemctl start NetworkManager
+sudo systemctl enable NetworkManager
+
+```
+- Permission Issues: Ensure you're running the commands with sufficient privileges, using sudo if necessary.
+- Interface Names: Confirm the name of your wireless interface using ip link or iwconfig. It might not always be wlan0.
+- NetworkManager vs. WPA_Supplicant: If you're using wpa_supplicant directly for network management, the process for changing networks will be different. NetworkManager, however, should be sufficient for most use cases and is user-friendly.
+
+nmcli offers a powerful and flexible way to manage network connections from the command line on Kali Linux, including on a Raspberry Pi. It's suitable for quickly switching WiFi networks, troubleshooting connections, or automating network configurations in scripts.
+
+
+
+
+
