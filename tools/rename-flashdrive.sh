@@ -1,6 +1,8 @@
 #!/bin/bash
 # v2.0.0
 
+# sudo apt-get update && sudo apt-get install exfat-utils
+
 # Function to safely rename the USB drive
 rename_usb() {
     old_mountpoint="$1"
