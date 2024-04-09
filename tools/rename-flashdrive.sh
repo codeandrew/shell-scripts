@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# v1.0.0
 # Function to safely rename the USB drive
 rename_usb() {
     old_mountpoint="$1"
