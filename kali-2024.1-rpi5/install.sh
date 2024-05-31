@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 packages=(
   util-linux
   util-linux-extra
@@ -16,9 +15,10 @@ packages=(
   fzf
   netdiscover
   ruby
-  jq 
-  yq  
+  jq
+  yq
   neofetch
+  docker.io
 )
 
 for package in "${packages[@]}"
@@ -34,6 +34,18 @@ do
 done
 
 
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
+
+cat << END
+INSTRUCTIONS
+---------------------
+exit the terminal, and create another session and test this
+docker run hello-world
+END
+
+
+
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 echo "source $HOME/.myprofile" >> $HOME/.zshrc
 
@@ -44,6 +56,7 @@ echo
 
 echo "source $HOME/.myprofile" >> $HOME/.zshrc
 
-mkdir -p ~/repo 
+mkdir -p ~/repo
 wget https://raw.githubusercontent.com/codeandrew/Kali-Linux-Dockerfile/master/scripts/auto-recon.sh  -O ~/repo/auto-recon.sh
 chmod +x ~/repo/auto-recon.sh
+
