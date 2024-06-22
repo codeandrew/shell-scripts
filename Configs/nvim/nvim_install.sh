@@ -32,8 +32,12 @@ install_nvim(){
 
 [!] Don't Install example configuration. say N
 
-    Change theme: Space t h
+    Change theme: space t h
     catppucin
+
+    Cheet Sheets:       space c h
+    open terminak :     space v # vertical
+                        space h # horizontal
 END
 
     read -p "restart nvim"
@@ -60,7 +64,7 @@ uninstall_nvim(){
 
 download_nerdfonts(){
     # https://www.nerdfonts.com/font-downloads
-    #wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
     cat << END
 [!] Unzip JetBrainsMono.zip then install font.
 
@@ -76,6 +80,6 @@ END
 # main ---- 
 
 backup_nvim
-download_nerdfonts
+#download_nerdfonts
 install_nvim
 
