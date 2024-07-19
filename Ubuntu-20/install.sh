@@ -73,24 +73,10 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 cp ../Configs/ubuntu_profile $HOME/.myprofile
-cp ../Configs/tmux.conf $HOME/.tmux.conf
+cp ../Configs/ubuntu-tmux.conf $HOME/.tmux.conf
 echo
 echo
 
-####################################
-## SpaceVim
-####################################
-
-echo "[+] Install SpaceVim"
-curl -sLf https://spacevim.org/install.sh | bash
-mkdir -p ~/.SpaceVim/autoload/
-mkdir -p  ~/.SpaceVim.d/
-
-wget https://raw.githubusercontent.com/codeandrew/shell-scripts/master/SpaceVim/init.toml 
-mv init.toml  ~/.SpaceVim.d/init.toml
-
-wget https://raw.githubusercontent.com/codeandrew/shell-scripts/master/SpaceVim/autoload/myspacevim.vim
-mv myspacevim.vim ~/.SpaceVim/autoload/
 
 sleep 2
 
