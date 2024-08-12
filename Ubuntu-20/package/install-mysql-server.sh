@@ -62,4 +62,18 @@ Example of creating a project database
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   );
 
+
+To Reset the Root Password:
+
+If you’ve forgotten the root password or are unsure what it is, you might need to reset it using the MySQL --skip-grant-tables method:
+  sudo systemctl stop mysql
+  sudo mysqld_safe --skip-grant-tables &
+
+Then, reset the password:
+  FLUSH PRIVILEGES;
+  ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+
+Finally, restart MySQL normally:
+  sudo systemctl start mysql
+
 END
