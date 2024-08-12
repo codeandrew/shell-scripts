@@ -1,5 +1,4 @@
 #!/bin/bash
-
 MYSQL_ROOT_PASSWORD="s3cure_th1s_sh1t"
 
 sudo apt-get update
@@ -23,4 +22,44 @@ sudo killall -u mysql
 sleep 5
 
 sudo systemctl start mysql
-echo "All done!"
+cat > &2 <<END
+DONE! 
+Things to do
+--------------------------------
+Check MySQL Service Status:
+Ensure that the MySQL service is running correctly.
+
+  sudo systemctl status mysql
+
+If it's not running, you can start it with:
+
+  sudo systemctl start mysql
+
+Login
+  mysql -u root -p
+
+Change Root Password (Optional):
+  ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_secure_password';
+
+Create a New MySQL User (Optional but Recommended):
+It's generally good practice to create a separate user account for your application rather than using the root account.
+
+  CREATE USER 'foundation_user'@'localhost' IDENTIFIED BY 'user_password';
+  GRANT ALL PRIVILEGES ON *.* TO 'foundation_user'@'localhost' WITH GRANT OPTION;
+  FLUSH PRIVILEGES;
+
+Example of creating a project database 
+
+  CREATE DATABASE foundation;
+  USE foundation;
+  CREATE TABLE user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    hashed_password VARCHAR(255) NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    is_superuser BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+
+END
