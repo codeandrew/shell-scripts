@@ -20,3 +20,14 @@ git clone https://github.com/dreamsofcode-io/neovim-python.git  ~/.config/nvim/l
 :LspInfo
 ```
 
+## NERD FONT INSTALLATION ubuntu
+
+```bash
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
+unzip JetBrainsMono.zip
+rm JetBrainsMono.zip
+
+# update font-cache -fv
+```

@@ -88,6 +88,6 @@ END
 # main ---- 
 
 backup_nvim
-#download_nerdfonts
+download_nerdfonts
 install_nvim
 
