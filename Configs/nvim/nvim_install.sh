@@ -35,9 +35,17 @@ install_nvim(){
     Change theme: space t h
     catppucin
 
-    Cheet Sheets:       space c h
-    open terminak :     space v # vertical
-                        space h # horizontal
+    nvim cheat Sheets:       space c h
+    open terminal:           space v # vertical
+                             space h # horizontal
+
+                                
+    window split:           ctrl+w s # horizontal split
+                            ctrl+w v # vertical
+
+
+
+
 END
 
     read -p "restart nvim"
