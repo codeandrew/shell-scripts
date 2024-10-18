@@ -89,7 +89,7 @@ cat ./nvm.cfg >> $HOME/.myprofile
 source ~/.myprofile
 nvm install node
 
-sudo update-alternatives --config editor
+echo "3" | sudo update-alternatives --config editor
 echo "zsh" >> $HOME/.bashrc
 
 echo "[!] Do this this manually"
