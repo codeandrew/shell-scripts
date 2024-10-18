@@ -5,15 +5,17 @@ sudo apt update
 ####################################
 ## Git 
 ####################################
-echo "Generating Git Configs and SSH Keygen ..."
+# Check if -i is passed
+if [[ "$1" == "-i" ]]; then
+    echo "Generating Git Configs and SSH Keygen ..."
 
-read -p "Git Config Email Address: " EMAIL
-read -p "Git Config Full Name: " NAME
+    read -p "Git Config Email Address: " email
+    read -p "Git Config Full Name: " name
 
-
-ssh-keygen -t rsa -b 4096 -C "${EMAIL}"
-git config --global user.email "${EMAIL}"         
-git config --global user.name "${NAME}"
+    ssh-keygen -t rsa -b 4096 -C "${email}"
+    git config --global user.email "${email}"
+    git config --global user.name "${name}"
+fi
 
 ####################################
 ## PACKAGES
