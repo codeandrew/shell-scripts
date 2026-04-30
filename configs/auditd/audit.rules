@@ -1,0 +1,35 @@
+## First rule - delete all old rules
+-D
+
+## Increase the buffer size (default is 8192)
+-b 17888
+
+## Monitor all command executions
+-a always,exit -F arch=b64 -S execve,execveat -k command_exec
+-a always,exit -F arch=b32 -S execve,execveat -k command_exec
+
+## Monitor execution of specific suspicious commands
+-a always,exit -F path=/usr/bin/wget -F perm=x -k suspicious_command
+-a always,exit -F path=/usr/bin/curl -F perm=x -k suspicious_command
+-a always,exit -F path=/usr/bin/nc -F perm=x -k suspicious_command
+-a always,exit -F path=/usr/bin/netcat -F perm=x -k suspicious_command
+-a always,exit -F path=/usr/bin/python -F perm=x -k suspicious_command
+-a always,exit -F path=/usr/bin/python3 -F perm=x -k suspicious_command
+-a always,exit -F path=/usr/bin/perl -F perm=x -k suspicious_command
+-a always,exit -F path=/bin/bash -F perm=x -k suspicious_command
+
+## Monitor modifications to critical system files
+-w /etc/passwd -p wa -k identity_change
+-w /etc/shadow -p wa -k identity_change
+-w /etc/group -p wa -k identity_change
+-w /etc/gshadow -p wa -k identity_change
+-w /etc/sudoers -p wa -k scope_change
+-w /etc/ssh/sshd_config -p wa -k scope_change
+
+## Monitor user and group management commands
+-a always,exit -F path=/usr/sbin/useradd -F perm=x -k user_mgmt
+-a always,exit -F path=/usr/sbin/userdel -F perm=x -k user_mgmt
+-a always,exit -F path=/usr/sbin/usermod -F perm=x -k user_mgmt
+# -a always,exit -F path=/usr/sbin/useradd -F perm=x -F auid>=1000 -F auid!=4294967295 -k user_mgmt
+# -a always,exit -F path=/usr/sbin/userdel -F perm=x -F auid>=1000 -F auid!=4294967295 -k user_mgmt
+# -a always,exit -F path=/usr/sbin/usermod -F perm=x -F auid>=1000 -F auid!=4294967295 -k user_mgmt
